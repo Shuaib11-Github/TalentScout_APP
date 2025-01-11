@@ -257,6 +257,10 @@ In a separate file (e.g., `chatbot.py`), we have:
      - Applies VADER sentiment analysis to either the raw user input (if English) or its translated version (if non-English).
    - **`validate_input(field, value)`**:
      - Uses regex or simple checks to ensure data consistency (e.g., email format, phone format).
+   - **`anonymize_data(self, data)`**:
+     - Replaces personal info with generic placeholders for data privacy.
+   - **`store_simulated_data(self)`**:
+     - Stores the anonymized data in self.simulated_data to simulate saving data in a database.  
    - **`generate_questions(techs)`**:
      - Uses the Gemini-Pro model to create 3–5 questions for each technology in the user’s tech stack.
    - **State-Specific Helper Methods**:
